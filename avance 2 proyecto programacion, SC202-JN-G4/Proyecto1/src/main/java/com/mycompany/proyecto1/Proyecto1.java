@@ -11,13 +11,13 @@ public class Proyecto1 {
         int opcion;
 
         do {
-            String menu = "GESTIÓN DE HABITACIONES\n"
+            String menu = "---GESTIÓN DE HABITACIONES---\n"
                         + "1. Registrar nueva habitación\n"
                         + "2. Consultar disponibilidad\n"
                         + "3. Modificar datos de habitación\n"
-                        + "GESTIÓN DE CLIENTES\n"
+                        + "---GESTIÓN DE CLIENTE---S\n"
                         + "4. Registrar nuevo cliente\n"
-                        + "GESTIÓN DE RESERVAS\n"
+                        + "---GESTIÓN DE RESERVAS---\n"
                         + "5. Realizar reserva\n"
                         + "6. Cancelar reserva\n"
                         + "7. Salir del sistema";
@@ -64,7 +64,7 @@ public class Proyecto1 {
         int id = Integer.parseInt(JOptionPane.showInputDialog("ID de habitación a modificar:"));
         Habitacion h = buscarHabitacion(id);
         if (h != null) {
-            String nuevoTipo = JOptionPane.showInputDialog("Nuevo tipo:");
+            String nuevoTipo = JOptionPane.showInputDialog("Nuevo tipo de habitacion (Sencilla/Doble/Suite)(:");
             h.tipo = nuevoTipo;
             JOptionPane.showMessageDialog(null, "Habitación modificada.");
         } else {
