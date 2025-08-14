@@ -1,5 +1,4 @@
 package com.mycompany.proyecto1;
-
 import javax.swing.JOptionPane;
 public class Proyecto1 {
 
@@ -8,16 +7,21 @@ public class Proyecto1 {
     static Reserva res1 = null, res2 = null, res3 = null;
 
     public static void main(String[] args) {
+
+        hab1 = new Habitacion(101, "Sencilla");
+        hab2 = new Habitacion(102, "Doble");
+        hab3 = new Habitacion(103, "Suite");
+
         int opcion;
 
         do {
-            String menu = "---GESTIÓN DE HABITACIONES---\n"
+            String menu = "GESTIÓN DE HABITACIONES\n"
                         + "1. Registrar nueva habitación\n"
                         + "2. Consultar disponibilidad\n"
                         + "3. Modificar datos de habitación\n"
-                        + "---GESTIÓN DE CLIENTE---S\n"
+                        + "GESTIÓN DE CLIENTES\n"
                         + "4. Registrar nuevo cliente\n"
-                        + "---GESTIÓN DE RESERVAS---\n"
+                        + "GESTIÓN DE RESERVAS\n"
                         + "5. Realizar reserva\n"
                         + "6. Cancelar reserva\n"
                         + "7. Salir del sistema";
@@ -64,7 +68,7 @@ public class Proyecto1 {
         int id = Integer.parseInt(JOptionPane.showInputDialog("ID de habitación a modificar:"));
         Habitacion h = buscarHabitacion(id);
         if (h != null) {
-            String nuevoTipo = JOptionPane.showInputDialog("Nuevo tipo de habitacion (Sencilla/Doble/Suite)(:");
+            String nuevoTipo = JOptionPane.showInputDialog("Nuevo tipo:");
             h.tipo = nuevoTipo;
             JOptionPane.showMessageDialog(null, "Habitación modificada.");
         } else {
@@ -153,7 +157,7 @@ public class Proyecto1 {
         return null;
     }
 }
-
+   
 
         
         
